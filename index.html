@@ -1,1 +1,41 @@
-<h1>Hello World!</h1>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Form</title>
+    <style>
+      body { font-family: sans-serif; padding: 2rem; }
+      input, textarea, select, button {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nuovo Ticket</h1>
+    <form id="ticketForm">
+      <label>Titolo
+        <input type="text" id="titolo" required />
+      </label>
+      <label>Descrizione
+        <textarea id="Descrizione" rows="4" required></textarea>
+      </label>
+      <label>Assegnatari
+        <select id="utenti" multiple required>
+          <option value="utente1@esempio.com">Utente 1</option>
+          <option value="utente2@esempio.com">Utente 2</option>
+          <option value="utente3@esempio.com">Utente 3</option>
+        </select>
+      </label>
+      <button type="submit">Invia ticket</button>
+    </form>
+    <div id="risposta"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
